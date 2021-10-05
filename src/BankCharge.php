@@ -12,7 +12,7 @@ class BankCharge extends NL_CheckOutV3
     public $merchant_id = '';
     public $merchant_password = '';
     public $receiver_email = '';
-    public $url_api = 'https://www.nganluong.vn/checkout.api.nganluong.post.php';
+    public $url_api = 'https://www.nganluong.vn/checkout.api.nganluong.post.php';//** https://www.nganluong.vn/checkout.php */
     public $cur_code = 'vnd';
 
     protected $return_url = '/';
@@ -28,7 +28,7 @@ class BankCharge extends NL_CheckOutV3
         $this->merchant_id = config('nganluong.merchant_id');
         $this->merchant_password = config('nganluong.merchant_password');
         $this->receiver_email = config('nganluong.receiver_email');
-        $this->url_api = config('nganluong.url_api', 'https://www.nganluong.vn/checkout.api.nganluong.post.php');
+        $this->url_api = config('nganluong.url_api', 'https://www.nganluong.vn/checkout.api.nganluong.post.php');//** https://www.nganluong.vn/checkout.php */
         $this->cur_code = config('nganluong.cur_code', 'vnd');
         parent::__construct($this->merchant_id, $this->merchant_password, $this->receiver_email, $this->url_api);
     }
